@@ -24,6 +24,10 @@ jobs:
         env:
           GRADLE_OPTS: "-Xmx2048m -XX:MaxMetaspaceSize=512m -Dorg.gradle.daemon=false"
         run: gradle assembleDebug --no-daemon --stacktrace
+      - name: Build debug APK
+        env:
+          GRADLE_OPTS: "-Xmx2048m -XX:MaxMetaspaceSize=512m -Dorg.gradle.daemon=false"
+        run: gradle assembleDebug --no-daemon --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
