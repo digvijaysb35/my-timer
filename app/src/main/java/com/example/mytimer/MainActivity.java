@@ -299,7 +299,8 @@ public class MainActivity extends Activity {
             : Uri.parse(saved);
         if (uri == null) return "Selected sound: Default alarm";
         try {
-            android.media.Ringtone tone = RingtoneManager.getRingtone(this, uri);\n            return "Selected sound: " + (tone != null ? tone.getTitle(this) : "System ringtone");
+            android.media.Ringtone tone = RingtoneManager.getRingtone(this, uri);
+            return "Selected sound: " + (tone != null ? tone.getTitle(this) : "System ringtone");
         } catch (Exception e) {
             return "Selected sound: System ringtone";
         }
